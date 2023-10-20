@@ -1,0 +1,101 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props-normalize.min.css";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: rgb(43, 43, 43);
+    padding-top: 86px;
+    height: 1920px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title-header {
+    letter-spacing: -1.2px;
+    font-size: 30px;
+}
+.menu-bar{
+    background-color: rgba(174, 211, 243, 0.75);
+    display: flex;
+    position: fixed;
+    padding: 0 20px;
+    top: 0;
+    min-height: 86px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+    backdrop-filter: blur(6px);
+}
+.butt-container{
+    display:flex;
+    padding: 20px;
+}
+.nav{
+    padding: 5px;
+}
+ul{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 1;
+    color: #777;
+    transition: color 0.5 ease;
+}
+.about-info{
+    height: 550px;
+    width: 100%;
+    background-color: aqua;
+    display: block;
+    position: relative;
+}
+.texts{
+    padding: 5px;
+}
+.scrollport{
+    mask-image: linear-gradient(to right, #0000, #000, #000, #0000);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    display: flex;
+    gap: var(--size-10);
+    align-items: start;
+    padding: var(--size-10);
+}
+.scrollport > div{
+    block-size: var(--size-15);
+    aspect-ratio: var(--ratio-square);
+    background-color: var(--surface-2);
+    border-radius: var(--radius-3);
+    box-shadow: var(--shadow-4);
+}
+.footer{
+    background-color: rgb(206, 206, 206);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    padding: 30px 10px;
+    width: 100%;
+}
+@media (max-width: 650px){
+    .menu-bar{
+        flex-direction: column;
+        padding: 15px 0;
+        row-gap: 8px;
+    }
+}
