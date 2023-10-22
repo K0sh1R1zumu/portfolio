@@ -1,0 +1,225 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props-normalize.min.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+::-webkit-scrollbar{
+    background-color: rgba(48, 48, 48, 0.3);
+    width: 10px;
+}
+/*Navigational Bar*/
+.menu-bar{
+    backdrop-filter: blur(6px); /*Creates a Blur effect on the Menu bar when scrolled*/
+    min-height: 118px;
+    font-family: 'Roboto';
+    width: 100%;
+    padding: 0 54px;
+    background-color: rgba(250, 235, 215, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    width: 100px;
+    animation: logo-rotation 3s linear infinite forwards;
+}
+nav > ul > li{
+    list-style: none;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+}
+.btn{
+    border-radius: 1em;
+    background-color: lightblue;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+.btn:hover{
+    background-color: cadetblue;
+    color:rgb(201, 0, 0)
+}
+
+
+
+/* Abouts Section */
+.about-info{
+    margin-top: 118px;
+    width: 100%;
+    padding:  0.1vh 8vw;
+    height: 835px;
+    background-color: aquamarine;
+}
+.about-info > h1{
+    font-family: 'Roboto', 'san-serif';
+    font-size: 6vw;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.about-info > p{
+    width: 500px;
+    font-size: 20px;
+    font-family: 'Roboto','san-serif';
+    font-weight: 400;
+
+}
+
+
+/*Projects Section*/
+.projects{
+    background-color:rgb(100, 100, 100);
+    font-family: 'Roboto';
+    width: 100%;
+    height: 835px;
+}
+.projects > h1{
+    font-size: 6vw;
+    padding: 0 6vw;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+.projects > p{
+    padding: 0 7vw;
+    font-size: 20px;
+
+}
+.scrollport{
+    mask-image: linear-gradient(to right, #0000, #000, #000, #0000);
+    display: flex;
+    overflow-x:auto;
+    overscroll-behavior-x: contain;
+    gap: var(--size-10);
+    align-items: center;
+    justify-content: center;
+    padding: 100px;;
+}
+.scrollport > div{
+    block-size: var(--size-14);
+    aspect-ratio: var(--ratio-square);
+    background-color: var(--surface-2);
+    border-radius: var(--radius-3);
+    box-shadow: var(--shadow-4);
+    position: relative;
+    transition: all 0.5s ease;
+}
+.scrollport > div > img{
+    width: 100%; 
+    position: absolute;
+    border-radius: 1em;
+}
+.scrollport > div:hover{
+    block-size: 370px;
+ }
+ 
+.sftw-texts{ /*text related stuff*/
+    background-color:rgb(61, 61, 61);
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
+}
+.sftw-texts > h1{
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+}
+.sftw-texts > p{
+    color: white;
+    font-size: 17px;
+}
+.gms-txt{ /*text related stuff*/
+    background-color:rgb(61, 61, 61);
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
+}
+.gms-txt > h1{
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+}
+.gms-txt > p{
+    color: white;
+    font-size: 17px;
+}
+.arts-txt{ /*text related stuff*/
+    background-color:rgb(61, 61, 61);
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
+}
+.arts-txt > h1{
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+}
+.arts-txt > p{
+    color: white;
+    font-size: 17px;
+}
+
+/*Footer Section*/
+.ftr{
+    font-family: 'Roboto';
+    background-color: #ff0f0f;
+    width: 100%;
+    min-height: 150px;
+    display:flex;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+}
+.ftr .copyright{
+    font-size: 20px;
+    color: white;
+}
+
+/* Other */
+@media (max-width: 800px){
+    .menu-bar{
+        flex-direction: column;
+        padding: 15px 0;
+        row-gap: 8px;
+    }
+
+    .ftr{
+        flex-direction: column;
+        padding: 15px 0;
+        row-gap: 8px;
+    }
+}
+
+/*Animation Section*/
+@keyframes logo-rotation{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+    
+}
+@keyframes btn-slider{
+
+}
